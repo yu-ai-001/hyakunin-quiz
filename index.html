@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>百人一首クイズ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>百人一首クイズ</h1>
+
+    <div id="setup-container">
+        <h2>問題を選択してください</h2>
+        <div id="poem-selection"></div>
+        <button id="start-random-button">ランダムに10首選ぶ</button>
+        <button id="start-selected-button">選んだ10首でクイズを始める</button>
+    </div>
+
+    <div id="quiz-container" class="hidden">
+        <div id="question-container">
+            <p id="question-number"></p>
+            <p id="kami-no-ku"></p>
+        </div>
+        <div id="answer-options"></div>
+        <div id="result-container">
+            <p id="result-message"></p>
+            <div id="correct-answer-container" class="hidden">
+                <h3>正解</h3>
+                <p id="correct-kami-no-ku"></p>
+                <p id="correct-shimo-no-ku"></p>
+                <p id="modern-translation"></p>
+            </div>
+            <button id="next-question" class="hidden">次の問題へ</button>
+        </div>
+    </div>
+
+    <div id="score-container" class="hidden">
+        <h2>結果発表</h2>
+        <p id="score"></p>
+        <button id="restart-button">もう一度挑戦する</button>
+    </div>
+
+    <audio id="correct-sound" src="correct.mp3"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
