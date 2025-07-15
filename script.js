@@ -126,8 +126,15 @@ let correctAnswers = 0;
 
 function init() {
     poemSelection.innerHTML = ''; // Clear existing content
+    const musumePoemIds = [18, 22, 57, 70, 77, 81, 87]; // むすめふさほせの歌番号
+
     poems.forEach(poem => {
         const container = document.createElement('div');
+
+        if (musumePoemIds.includes(poem.id)) {
+            container.classList.add('musume-poem');
+        }
+
         const checkbox = document.createElement('input');
         checkbox.type = 'checkbox';
         checkbox.id = `poem-${poem.id}`;

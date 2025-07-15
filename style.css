@@ -45,6 +45,11 @@ body {
     background-color: #e0e0ff;
 }
 
+.musume-poem label {
+    background-color: #fff0f5; /* Light pink for special poems */
+    border-color: #e6c0d1;
+}
+
 button {
     padding: 10px 20px;
     border: none;
